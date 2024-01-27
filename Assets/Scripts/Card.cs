@@ -7,14 +7,48 @@ using UnityEngine.UIElements;
 
 public class Card : MonoBehaviour
 {
-    [Header("Top")]
-    [SerializeField] private int pA;
+    private BattleSystem bs;
 
-    enum DataType { Attack, Utility }
-    [SerializeField] DataType type;
+    [Header("Battle Stats")]
+    [Range(0,10)]
+    public int pA;
 
-    [Header("Image")]
+    enum CardType { Attack, Utility }
+    [SerializeField] CardType type;
+
+    public enum EffectType { None, DOT, BuffDefence, BuffAttack, Stun, Dodge, Schuffle }
+    [Header("Sucess")]
+    [Tooltip("Damage dealt by the player")]
+    public int PlayerDamage;
+
+    [Tooltip("Value healed by the player")]
+    public int PlayerHeal;
+
+    [Tooltip("Effect applied to the enemy")]
+    
+    public EffectType PlayerEffect;
+
+
+    [Header("Fail")]
+    [Tooltip("Damage dealt to the player")]
+    public int EnemyDamage;
+
+    [Tooltip("Value healed by the Enemy")]
+    public int EnemyHeal;
+
+    [Tooltip("Effect applied to the player")]
+    
+    public EffectType EnemyEffect;
+
+
+    [Space (10)]
+    [Header("------------------")]
+    [Space(10)]
+
+
+    [Header("Body")]
     [SerializeField] private Sprite cardImage;
+
 
     [TextArea]
     [Header("Description")]
@@ -39,7 +73,7 @@ public class Card : MonoBehaviour
         //PA
         transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = pA + " PA";
         //Type
-        if (type == DataType.Attack)
+        if (type == CardType.Attack)
         {
             //top right sprite
             transform.GetChild(3).GetChild(0).GetChild(1).gameObject.GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>("Attack");
@@ -50,7 +84,7 @@ public class Card : MonoBehaviour
             //background bottom
             transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = new Color(0.8039216f, 0.3721133f, 0.2784314f, 1f);
         }
-        if (type == DataType.Utility)
+        if (type == CardType.Utility)
         {
             //top right sprite
             transform.GetChild(3).GetChild(0).GetChild(1).gameObject.GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>("Utility");
@@ -73,4 +107,5 @@ public class Card : MonoBehaviour
         //Fail
         transform.GetChild(2).GetChild(0).GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Bad : " + fail;
     }
+
 }

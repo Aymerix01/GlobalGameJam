@@ -458,6 +458,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pA: 0
   type: 0
+  PlayerDamage: 0
+  PlayerHeal: 0
+  PlayerEffect: 0
+  EnemyDamage: 0
+  EnemyHeal: 0
+  EnemyEffect: 0
   cardImage: {fileID: 0}
   joke: 
   sucess: 
