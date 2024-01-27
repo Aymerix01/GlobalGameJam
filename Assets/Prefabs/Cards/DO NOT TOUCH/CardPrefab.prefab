@@ -417,6 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3929750307926641425}
   - component: {fileID: 8306707196882645105}
+  - component: {fileID: 2059364957730165040}
   m_Layer: 0
   m_Name: CardPrefab
   m_TagString: Untagged
@@ -468,6 +469,20 @@ MonoBehaviour:
   joke: 
   sucess: 
   fail: 
+--- !u!114 &2059364957730165040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856385912945124009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06412cf7524a968459e1e494adc9708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialPosition: {x: 0, y: 0, z: 0}
+  IsDraggable: 0
 --- !u!1 &4611706901567478691
 GameObject:
   m_ObjectHideFlags: 0
