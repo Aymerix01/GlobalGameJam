@@ -26,19 +26,6 @@ public class Card : MonoBehaviour
     public int PlayerHeal;
 
     [Tooltip("Effect applied to the enemy")]
-    
-    public EffectType PlayerEffect;
-
-
-    [Header("Sucess")]
-    [Tooltip("Damage dealt by the player")]
-    public int PlayerDamage;
-
-    [Tooltip("Value healed by the player")]
-    public int PlayerHeal;
-
-    [Tooltip("Effect applied to the enemy")]
-    
     public EffectType PlayerEffect;
 
 
