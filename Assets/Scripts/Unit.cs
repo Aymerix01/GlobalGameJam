@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] public string UnitName;
     [SerializeField] public int maxHP;
     public int currentHP;
-    public string nextMove;
-    [SerializeField] public int damage;
+    public int activedot;
+    public int defense;
+
+    public void TakeDoT()
+    {
+        if (activedot > 0)
+        {
+            this.currentHP -= activedot;
+            activedot--;
+        }
+    }
 }
