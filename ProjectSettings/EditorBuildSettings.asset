@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 35f2a3f36d2255540b2e1ba9b96872b6
   - enabled: 1
     path: Assets/Scenes/Gillian.unity
