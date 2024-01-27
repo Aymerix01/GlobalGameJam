@@ -150,48 +150,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c58f16ab4421e24fa413187c963f6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicList:
-  - {fileID: 8300000, guid: 8f9c9704662abca439392e6abca14a4e, type: 3}
-  - {fileID: 8300000, guid: 528c140dae939ce4fb918c7731d91854, type: 3}
-  sfxList:
+  names:
+  - BZ(Clone)
+  - Tarte(Clone)
+  - Prout(Clone)
+  - Musicien(Clone)
+  - Mitraillette(Clone)
+  - Guitare(Clone)
+  - Mitraillette(Clone)
+  clips:
   - {fileID: 8300000, guid: 029681022ac62d74e991af8d21984672, type: 3}
   - {fileID: 8300000, guid: 6a60d36f28a2c2d4a94f4184c878ad18, type: 3}
   - {fileID: 8300000, guid: 3dbabe240e729b64f8ebf497be93881d, type: 3}
   - {fileID: 8300000, guid: 1e71bb780d8f534499ef800d8c973182, type: 3}
   - {fileID: 8300000, guid: d3291bfb539adab4db1480593fcb2c10, type: 3}
-  - {fileID: 8300000, guid: 2e535526852e5204fbf7697cb3448caa, type: 3}
-  bougClips:
-  - {fileID: 8300000, guid: b46542c113713a0479364d06de76ec78, type: 3}
-  - {fileID: 8300000, guid: 40c68ac3d33634846841ea4c95486948, type: 3}
-  - {fileID: 8300000, guid: e53e3f47a853c2641a5b1b32b967ed7e, type: 3}
-  - {fileID: 8300000, guid: 82257490e9639e647972baf20d30cf68, type: 3}
-  - {fileID: 8300000, guid: f2a9caf8947af114d802dff3390f903c, type: 3}
-  dwarfClips:
-  - {fileID: 8300000, guid: 270196f2441534747b28dada901ecb82, type: 3}
-  - {fileID: 8300000, guid: 4e634fa5e776b3845aa1e652607563c3, type: 3}
-  - {fileID: 8300000, guid: f433565068919c34cafed5f590877974, type: 3}
-  - {fileID: 8300000, guid: 9bb2fe07a0de75746af53e168321b1b8, type: 3}
-  - {fileID: 8300000, guid: 0a6e9c0911385644e8094317ec3a65fa, type: 3}
-  - {fileID: 8300000, guid: 6b8fc246f3f53fb478b44ef8a8b6ec08, type: 3}
-  clownClips:
-  - {fileID: 8300000, guid: 077f3ef4feef8d742a51d6dc7ab2d052, type: 3}
-  - {fileID: 8300000, guid: 853212ae6eec4ac4da5248bd531c0580, type: 3}
-  - {fileID: 8300000, guid: 16d233b251460574f9a34ed761048421, type: 3}
-  - {fileID: 8300000, guid: 470f79c276596fb418c115cbf39f27bb, type: 3}
-  - {fileID: 8300000, guid: 6e67c618bf6e1584a8512d363b3eebde, type: 3}
-  - {fileID: 8300000, guid: 0169954e46cd0c54a83dd116c59918c5, type: 3}
-  - {fileID: 8300000, guid: f571d2db6f038dc4ea741a6c97c645fc, type: 3}
-  - {fileID: 8300000, guid: bd31fb96d8b02d043997a73fecbf3458, type: 3}
-  - {fileID: 8300000, guid: 7c338c56c073e1544bee6e38e24af4a5, type: 3}
-  - {fileID: 8300000, guid: c0beb9692a7feba48ba9354f75c0767e, type: 3}
-  - {fileID: 8300000, guid: 37c5daaf4c10364488933c8692d866bb, type: 3}
-  - {fileID: 8300000, guid: d4d9888353689cd4ca13a9195e6e0bdc, type: 3}
-  kingClips:
-  - {fileID: 8300000, guid: af3695508d92ac44098de4b7874d7bd9, type: 3}
-  - {fileID: 8300000, guid: da118edf6e75b724ba106be2eefddd36, type: 3}
-  - {fileID: 8300000, guid: b268f012adf34ed4881d86190c850253, type: 3}
-  - {fileID: 8300000, guid: 550ea56303cca1c448ca440b8972d4af, type: 3}
-  - {fileID: 8300000, guid: 7582876aabb16e448be3fed092efb0c8, type: 3}
-  - {fileID: 8300000, guid: b878728ae21543244a5a817bcba781b9, type: 3}
-  - {fileID: 8300000, guid: b878728ae21543244a5a817bcba781b9, type: 3}
-  - {fileID: 8300000, guid: 19d186f1beaa9f1469c46586196a1dad, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
