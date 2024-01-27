@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8981256588794575571
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3856385912945124009, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_Name
+      value: Messi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: pA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: fail
+      value: "D\xE9g\xE2t sur joueur."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: joke
+      value: "O\xF9 va Messi quand il se blesse ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: sucess
+      value: Poison sur ennemi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: cardImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0aa5636496c0ad74095c6be53a10a8b3, type: 3}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: EnemyDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: PlayerEffect
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
