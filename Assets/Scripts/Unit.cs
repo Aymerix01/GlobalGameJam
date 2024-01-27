@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
     public int currentHP;
     public int activedot;
     public int defense;
+    public int atkbuff;
 
     public void TakeDoT()
     {
