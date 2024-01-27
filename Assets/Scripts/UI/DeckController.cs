@@ -38,6 +38,7 @@ public class DeckController : MonoBehaviour
             CardsInDeck.RemoveAt(randomCard);
         }
         CardBackSpawned = Instantiate(CardBack, transform);
+        CardBackSpawned.transform.position += new Vector3(0, -1f, 0);
     }
 
     public void UpdateCardPlayable(Vector3 pos)
