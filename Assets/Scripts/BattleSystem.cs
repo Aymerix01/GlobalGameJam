@@ -10,17 +10,15 @@ public class BattleSystem : MonoBehaviour
 {
     public BattleState state;
 
-    private GameObject playerInstance;
-    private GameObject enemyInstance;
-
-    private Transform playerPosition;
-    private Transform enemyPosition;
+    [SerializeField] private GameObject playerInstance;
+    [SerializeField] private GameObject enemyInstance;
 
     PlayerUnit playerUnit;
     EnemyUnit enemyUnit;
 
-    private playerBattleHUD playerHUD;
-    private enemyBattleHUD enemyHUD;
+    [SerializeField] private Image APbarre;
+    [SerializeField] private Image HealthBarre;
+    [SerializeField] private Image EnemyBarre;
 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +29,10 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject playerObject = Instantiate(playerInstance, playerPosition);
-        playerUnit = playerObject.GetComponent<PlayerUnit>();
+        playerUnit = playerInstance.GetComponent<PlayerUnit>();
+        enemyUnit = enemyInstance.GetComponent<EnemyUnit>();
 
-        GameObject enemyObject = Instantiate(enemyInstance, enemyPosition);
-        enemyUnit = enemyObject.GetComponent<EnemyUnit>();
         enemyUnit.NextMove();
-
-        playerHUD.SetHUD(playerUnit);
-        enemyHUD.SetHUD(enemyUnit);
 
         yield return new WaitForSeconds(1f);
 
@@ -48,7 +41,11 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator Turn(Card c)
     {
-        playerHUD.SetAP(playerUnit.currrentAP-c.pA);
+        Debug.Log("Card played");
+        playerUnit.TakeDoT();
+        enemyUnit.TakeDoT();
+
+        APbarre.fillAmount = (playerUnit.currrentAP - c.pA) / playerUnit.maxAP;
 
         //Effet de carte
         Damage(enemyUnit, c.PlayerDamage);
@@ -72,11 +69,8 @@ public class BattleSystem : MonoBehaviour
                 break;
 
         }
-
-        playerHUD.SetHP(playerUnit.currentHP);
-        enemyHUD.SetHP(enemyUnit.currentHP);
-
-
+        HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
+        EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
 
         yield return new WaitForSeconds(1);
 
@@ -103,7 +97,7 @@ public class BattleSystem : MonoBehaviour
                 break;
 
         }
-        playerHUD.SetHP(playerUnit.currentHP);
+        HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         enemyUnit.NextMove();
 
 
@@ -120,11 +114,8 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        playerUnit.TakeDoT();
-        enemyUnit.TakeDoT();
-
-        playerHUD.SetHP(playerUnit.currentHP);
-        enemyHUD.SetHP(enemyUnit.currentHP);
+        HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
+        EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
     }
 
     void EndBattle()
