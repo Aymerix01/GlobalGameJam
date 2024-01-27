@@ -4,24 +4,23 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Unity.PlasticSCM.Editor.WebApi;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 public class BattleSystem : MonoBehaviour
 {
     public BattleState state;
 
-    public GameObject playerInstance;
-    public GameObject enemyInstance;
+    private GameObject playerInstance;
+    private GameObject enemyInstance;
 
-    public Transform playerPosition;
-    public Transform enemyPosition;
+    private Transform playerPosition;
+    private Transform enemyPosition;
 
     PlayerUnit playerUnit;
     EnemyUnit enemyUnit;
 
-    public playerBattleHUD playerHUD;
-    public enemyBattleHUD enemyHUD;
+    private playerBattleHUD playerHUD;
+    private enemyBattleHUD enemyHUD;
 
     // Start is called before the first frame update
     void Start()
@@ -110,7 +109,7 @@ public class BattleSystem : MonoBehaviour
 
     public void Damage(Unit u,int damage)
     {
-        u.currentHP -= damage - u.defense;
+        u.currentHP = Mathf.Max( u.currentHP- damage + u.defense + u.atkbuff,0);
         u.defense = 0;
         if (u.currentHP<=0 )
         {
@@ -139,6 +138,6 @@ public class BattleSystem : MonoBehaviour
 
     public void Heal(int value)
     {
-        playerUnit.currentHP += value;
+        playerUnit.currentHP = Mathf.Min(playerUnit.currentHP + value,playerUnit.maxHP);
     }
 }
