@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8981256588794575571
+--- !u!1001 &7205770666079728986
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3856385912945124009, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: m_Name
-      value: Messi
+      value: Cheval
       objectReference: {fileID: 0}
     - target: {fileID: 3929750307926641425, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,41 +52,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5869754072567452853, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5869754072567452853, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: pA
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: "1 d\xE9g\xE2t sur joueur."
+      value: "10 d\xE9g\xE2ts sur le joueur"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: joke
-      value: "O\xF9 va Messi quand il se blesse ?"
+      value: Qui a peint mon cheval en bleu
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: Poison sur ennemi.
+      value: "10 d\xE9g\xE2ts sur l'ennemi"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
       value: 
-      objectReference: {fileID: 21300000, guid: 0aa5636496c0ad74095c6be53a10a8b3, type: 3}
+      objectReference: {fileID: 21300000, guid: c6d616bd265e82f4d87883551ad43feb, type: 3}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: EnemyDamage
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
-      propertyPath: PlayerEffect
-      value: 1
+      propertyPath: PlayerDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
