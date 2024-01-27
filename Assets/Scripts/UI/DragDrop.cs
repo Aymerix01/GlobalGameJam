@@ -21,7 +21,6 @@ public class DragDrop : MonoBehaviour
         camera = Camera.main;
         deckController = GameObject.Find("PosDeck").GetComponent<DeckController>();
         InitialPosition = transform.position;
-        Debug.Log(transform.localScale);
         InitialScale = transform.localScale;
         HasPlayThisCard = false;
         BattleSystem = GameObject.Find("BattleSystem");
@@ -46,7 +45,6 @@ public class DragDrop : MonoBehaviour
     {
         if (IsDraggable)
         {
-            Debug.Log("Enter");
             transform.localScale = transform.localScale * 2;
             transform.position -= new Vector3(0, InitialPosition.y / 2, 0);
         }
@@ -55,7 +53,6 @@ public class DragDrop : MonoBehaviour
     {
         if (IsDraggable)
         {
-            Debug.Log("Exit");
             transform.localScale = InitialScale;
             transform.position = InitialPosition;
         }
@@ -98,8 +95,7 @@ public class DragDrop : MonoBehaviour
             if (HasPlayThisCard)
             {
                 deckController.UpdateCardPlayable(InitialPosition);
-                BattleSystem.GetComponent<BattleSystem>().Turn(GetComponent<Card>());
-                Debug.Log("Here to start effect of this card : "+gameObject.name);
+                StartCoroutine(BattleSystem.GetComponent<BattleSystem>().Turn(GetComponent<Card>()));
                 Destroy(gameObject);
                 deckController.RemoveCardInHand(this);
             }
@@ -111,8 +107,6 @@ public class DragDrop : MonoBehaviour
             }
             else
             {
-                Debug.Log(InitialPosition);
-                Debug.Log(InitialScale);
                 ReturnToInitialPosition();
             }
         }

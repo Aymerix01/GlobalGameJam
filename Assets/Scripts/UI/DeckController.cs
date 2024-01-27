@@ -65,7 +65,6 @@ public class DeckController : MonoBehaviour
 
     public void RerollOneCard(DragDrop dd, Vector3 pos)
     {
-        Debug.Log("Reroll");
         RemoveCardInHand(dd);
         CardsInDeck.Add(dd);
         CardsInDeck[CardsInDeck.Count-1].transform.position = transform.position;
