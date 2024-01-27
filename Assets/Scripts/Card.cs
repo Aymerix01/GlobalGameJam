@@ -16,6 +16,7 @@ public class Card : MonoBehaviour
     enum CardType { Attack, Utility }
     [SerializeField] CardType type;
 
+
     public enum EffectType { None, DOT, BuffDefence, BuffAttack, Stun, Dodge, Schuffle, GainPA }
     [Header("Sucess")]
     [Tooltip("Damage dealt by the player")]

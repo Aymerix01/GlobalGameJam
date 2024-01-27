@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4600354932291238080}
   - component: {fileID: 1665365583929242980}
   - component: {fileID: -5182373548200953412}
+  - component: {fileID: 7807177470058307479}
   m_Layer: 0
   m_Name: CarteExemple_Sprite
   m_TagString: Untagged
@@ -173,3 +174,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7807177470058307479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561152085067071363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cf4d9e039f7de48883280f0c1c910c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pA: 0
+  type: 0
+  PlayerDamage: 0
+  PlayerHeal: 0
+  PlayerEffect: 0
+  EnemyDamage: 0
+  EnemyHeal: 0
+  EnemyEffect: 0
+  cardImage: {fileID: 0}
+  joke: 
+  sucess: 
+  fail: 
