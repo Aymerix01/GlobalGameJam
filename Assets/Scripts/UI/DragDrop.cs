@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,6 +9,7 @@ public class DragDrop : MonoBehaviour
     private Vector3 mousePositionOffset;
     private Camera camera;
     public Vector3 InitialPosition;
+    private Vector3 InitialScale;
     public bool IsDraggable;
     private bool HasPlayThisCard;
     private bool HasReroll;
@@ -18,6 +20,8 @@ public class DragDrop : MonoBehaviour
         camera = Camera.main;
         deckController = GameObject.Find("PosDeck").GetComponent<DeckController>();
         InitialPosition = transform.position;
+        Debug.Log(transform.localScale);
+        InitialScale = transform.localScale;
         HasPlayThisCard = false;
     }
 
@@ -34,6 +38,25 @@ public class DragDrop : MonoBehaviour
     private void OnMouseDown()
     {
         mousePositionOffset = transform.position - GetMouseWorldposition();
+    }
+
+    private void OnMouseEnter()
+    {
+        if (IsDraggable)
+        {
+            Debug.Log("Enter");
+            transform.localScale = transform.localScale * 2;
+            transform.position -= new Vector3(0, InitialPosition.y / 2, 0);
+        }
+    }
+    private void OnMouseExit()
+    {
+        if (IsDraggable)
+        {
+            Debug.Log("Exit");
+            transform.localScale = InitialScale;
+            transform.position = InitialPosition;
+        }
     }
 
     private void OnMouseDrag()
@@ -79,10 +102,14 @@ public class DragDrop : MonoBehaviour
             }
             else if (HasReroll)
             {
+                transform.localScale = InitialScale;
+                transform.position = InitialPosition;
                 deckController.RerollOneCard(this, InitialPosition);
             }
             else
             {
+                Debug.Log(InitialPosition);
+                Debug.Log(InitialScale);
                 ReturnToInitialPosition();
             }
         }
