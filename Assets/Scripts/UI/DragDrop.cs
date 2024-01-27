@@ -12,6 +12,7 @@ public class DragDrop : MonoBehaviour
     private bool HasPlayThisCard;
     private bool HasReroll;
     private DeckController deckController;
+    private GameObject BattleSystem;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class DragDrop : MonoBehaviour
         deckController = GameObject.Find("PosDeck").GetComponent<DeckController>();
         InitialPosition = transform.position;
         HasPlayThisCard = false;
+        BattleSystem = GameObject.Find("BattleSystem");
     }
 
     private Vector3 GetMouseWorldposition()
@@ -73,6 +75,7 @@ public class DragDrop : MonoBehaviour
             if (HasPlayThisCard)
             {
                 deckController.UpdateCardPlayable(InitialPosition);
+                BattleSystem.GetComponent<BattleSystem>().Turn(GetComponent<Card>());
                 Debug.Log("Here to start effect of this card : "+gameObject.name);
                 Destroy(gameObject);
                 deckController.RemoveCardInHand(this);
