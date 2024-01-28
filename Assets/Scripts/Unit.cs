@@ -26,11 +26,12 @@ public class Unit : MonoBehaviour
     {
         if (activedot >= 1)
         {
-            effect.enabled = true ;
+            
+            effect.gameObject.SetActive(true);
         }
         else
         {
-            effect.enabled = false;
+            effect.gameObject.SetActive(false);
         }
     }
 }
