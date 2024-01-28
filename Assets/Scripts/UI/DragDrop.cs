@@ -15,10 +15,12 @@ public class DragDrop : MonoBehaviour
     private bool HasReroll;
     private DeckController deckController;
     private GameObject BattleSystem;
+    private GameObject player;
 
     private void Start()
     {
         camera = Camera.main;
+        player = GameObject.Find("Player");
         deckController = GameObject.Find("PosDeck").GetComponent<DeckController>();
         InitialPosition = transform.position;
         InitialScale = transform.localScale;
@@ -92,15 +94,17 @@ public class DragDrop : MonoBehaviour
     {
         if (IsDraggable)
         {
-            if (HasPlayThisCard)
+            if (HasPlayThisCard && GetComponent<Card>().pA<= player.GetComponent<PlayerUnit>().currrentAP)
             {
                 deckController.UpdateCardPlayable(InitialPosition);
-                StartCoroutine(BattleSystem.GetComponent<BattleSystem>().Turn(GetComponent<Card>()));
+                BattleSystem.GetComponent<BattleSystem>().Turn(GetComponent<Card>());
                 Destroy(gameObject);
                 deckController.RemoveCardInHand(this);
             }
-            else if (HasReroll)
+            else if (HasReroll && 1 <= player.GetComponent<PlayerUnit>().currrentAP)
             {
+                player.GetComponent<PlayerUnit>().currrentAP -= 1;
+                player.GetComponent<PlayerUnit>().UpdateAP();
                 transform.localScale = InitialScale;
                 transform.position = InitialPosition;
                 deckController.RerollOneCard(this, InitialPosition);
