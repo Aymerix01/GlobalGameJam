@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.042278312, g: 0.042280763, b: 0.042259835, a: 1}
+  m_IndirectSpecularColor: {r: 0.042281725, g: 0.042284228, b: 0.04226301, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1365,6 +1365,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: maxHP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: effect
       value: 
       objectReference: {fileID: 1830232794}
@@ -1372,6 +1376,10 @@ PrefabInstance:
       propertyPath: APbarre
       value: 
       objectReference: {fileID: 672118856}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: currentHP
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: dotdamage
       value: 3
@@ -1466,9 +1474,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4504095828806435641, guid: bacad05b1b44d6c4992878473e8ef4a3, type: 3}
     - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
       propertyPath: Cards.Array.data[11]
       value: 
       objectReference: {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[12]
+      value: 
+      objectReference: {fileID: 4778156989182049981, guid: 0bf9422834210fd42806531d8276864d, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[13]
+      value: 
+      objectReference: {fileID: 8947963802525474649, guid: d8d6825771fffae4d8ab0ba53bca6729, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[14]
+      value: 
+      objectReference: {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[15]
+      value: 
+      objectReference: {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[16]
+      value: 
+      objectReference: {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[17]
+      value: 
+      objectReference: {fileID: 5271313581858003066, guid: 7878a88f6c76d6e428d68b365fc6ff52, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[18]
+      value: 
+      objectReference: {fileID: 7054309020423980512, guid: 664627101d0928f4f90f054e0d754a72, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[19]
+      value: 
+      objectReference: {fileID: 1989897467539231873, guid: 2635232e9fa2332489bbfa32f48b11e8, type: 3}
     - target: {fileID: 4234607685683189437, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.61
@@ -1556,7 +1600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: maxHP
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: damage
@@ -1584,7 +1628,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 19d186f1beaa9f1469c46586196a1dad, type: 3}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: currentHP
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: dotdamage
