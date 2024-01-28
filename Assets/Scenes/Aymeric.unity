@@ -1282,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: maxHP
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: effect
@@ -1294,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 672118856}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: currentHP
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: dotdamage
@@ -1433,6 +1433,10 @@ PrefabInstance:
     - target: {fileID: 4006315119625448656, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: damage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: effect

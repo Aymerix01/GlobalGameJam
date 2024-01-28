@@ -70,8 +70,7 @@ public class BattleSystem : MonoBehaviour
 
             Damage(enemyUnit, c.PlayerDamage + playerUnit.atkbuff*f(c.PlayerDamage));
             HealPlayer(c.PlayerHeal);
-            Block(playerUnit,4);
-            Buff(3);
+
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
                 DoT(enemyUnit, playerUnit.dotdamage);

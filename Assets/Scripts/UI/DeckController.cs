@@ -76,9 +76,9 @@ public class DeckController : MonoBehaviour
 
     public void RerollAllCards()
     {
-        if (1 <= player.GetComponent<PlayerUnit>().currrentAP)
+        if (3 <= player.GetComponent<PlayerUnit>().currrentAP)
         {
-            player.GetComponent<PlayerUnit>().currrentAP -= 1;
+            player.GetComponent<PlayerUnit>().currrentAP -= 3;
             player.GetComponent<PlayerUnit>().UpdateAP();
             int i = 0;
             CardsInHand.RemoveAll(x => !x);

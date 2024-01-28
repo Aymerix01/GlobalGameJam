@@ -1277,6 +1277,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: maxHP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: effect
       value: 
       objectReference: {fileID: 1633936502}
@@ -1284,6 +1288,10 @@ PrefabInstance:
       propertyPath: APbarre
       value: 
       objectReference: {fileID: 672118856}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: currentHP
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: dotdamage
       value: 3
@@ -1345,6 +1353,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[12]
+      value: 
+      objectReference: {fileID: 5271313581858003066, guid: 7878a88f6c76d6e428d68b365fc6ff52, type: 3}
     - target: {fileID: 5561517230914361560, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
       propertyPath: RerollBackground
       value: 
@@ -1419,6 +1435,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: maxHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: effect
       value: 
       objectReference: {fileID: 1293946152}
@@ -1426,6 +1450,10 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: f2a9caf8947af114d802dff3390f903c, type: 3}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: currentHP
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: dotdamage
       value: 3
@@ -1464,7 +1492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.data[1]
-      value: Salade(Clone)
+      value: Jardinier(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 8937312920846869159, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: m_Sprite
