@@ -54,7 +54,7 @@ public class BattleSystem : MonoBehaviour
         {
             audioManager.PlayClip(c.audioClip);
         } 
-        else if (playerUnit.audioClip[c.name] != null)
+        else if (playerUnit.audioClip.ContainsKey(c.name))
         {
             audioManager.PlayClip(playerUnit.audioClip[c.name]);
         }
