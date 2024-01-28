@@ -11,7 +11,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public float dotdamage;
     public float defense;
     public float atkbuff;
-    [SerializeField] public Image effect;
+    [SerializeField] public SpriteRenderer effect;
 
     public void TakeDoT()
     {
@@ -26,7 +26,7 @@ public class Unit : MonoBehaviour
     {
         if (activedot >= 1)
         {
-            effect.enabled = true;
+            effect.enabled = true ;
         }
         else
         {
