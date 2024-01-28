@@ -65,6 +65,7 @@ public class BattleSystem : MonoBehaviour
             Damage(enemyUnit, c.PlayerDamage);
             Heal(c.PlayerHeal);
             Block(playerUnit,4);
+            Buff(3);
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
                 DoT(enemyUnit, playerUnit.dotdamage);
@@ -178,7 +179,7 @@ public class BattleSystem : MonoBehaviour
 
     public void DoT(Unit u,float value)
     {
-        u.activedot = value;
+        u.activedot += value;
     }
 
     public void Block(Unit u, float value)
