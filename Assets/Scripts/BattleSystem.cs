@@ -66,15 +66,15 @@ public class BattleSystem : MonoBehaviour
             Heal(c.PlayerHeal);
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
-                DoT(enemyUnit);
+                DoT(enemyUnit, playerUnit.dotdamage);
             }
         } 
         else if (Array.IndexOf(enemyUnit.resiste, c.name) > -1)
         {
             Damage(playerUnit, c.EnemyDamage);
-            if (c.PlayerEffect == Card.EffectType.DOT)
+            if (c.EnemyEffect == Card.EffectType.DOT)
             {
-                DoT(playerUnit);
+                DoT(playerUnit, enemyUnit.dotdamage);
             }
         }
         else
@@ -175,9 +175,9 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void DoT(Unit u)
+    public void DoT(Unit u,float value)
     {
-        u.activedot = 3;
+        u.activedot = value;
     }
 
     public void Block(Unit u, float value)

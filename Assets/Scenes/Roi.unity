@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23431373, g: 0.2343276, b: 0.23420995, a: 1}
+  m_IndirectSpecularColor: {r: 0.042281725, g: 0.042284228, b: 0.04226301, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1373,6 +1373,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 672118856}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: dotdamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: HealthBarre
       value: 
       objectReference: {fileID: 1801127212}
@@ -1554,6 +1558,10 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 19d186f1beaa9f1469c46586196a1dad, type: 3}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: dotdamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: craint.Array.size
       value: 2
