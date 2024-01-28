@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: "Buff d\u2019attaque\r\n"
+      value: "Augmentation du rire inflig\xE9\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: audioClip
@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: cardImage
       value: 
       objectReference: {fileID: 21300000, guid: 9487a9737bd48e042b353d65eacb1d6e, type: 3}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: PlayerEffect
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

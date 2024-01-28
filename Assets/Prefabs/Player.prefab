@@ -45,13 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fd165ec4d2fd247938cf5768e3c103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 50
+  currentHP: 50
   activedot: 0
+  dotdamage: 3
   defense: 0
   atkbuff: 0
-  maxAP: 2
-  currrentAP: 2
+  effect: {fileID: 0}
+  maxAP: 6
+  currrentAP: 6
   APbarre: {fileID: 0}
   HealthBarre: {fileID: 0}
 --- !u!1 &3058623083539471404
