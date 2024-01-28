@@ -58,15 +58,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: "8 d\xE9g\xE2ts sur le joueur"
+      value: "5 d\xE9g\xE2ts sur le joueur."
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: joke
-      value: Qui a peint mon cheval en bleu
+      value: Qui a peint mon cheval en bleu ?
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: "18 d\xE9g\xE2ts sur l'ennemi"
+      value: "8 d\xE9g\xE2ts sur l'ennemi."
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
