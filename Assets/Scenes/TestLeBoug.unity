@@ -1092,7 +1092,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f2a9caf8947af114d802dff3390f903c, type: 3}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: craint.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.size
@@ -1105,6 +1105,18 @@ PrefabInstance:
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: craint.Array.data[1]
       value: Mitraillette(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[2]
+      value: BZ(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[3]
+      value: R(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[4]
+      value: Tarte(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.data[0]

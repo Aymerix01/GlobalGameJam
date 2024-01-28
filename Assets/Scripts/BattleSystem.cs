@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 using System;
+using UnityEditor.Experimental.GraphView;
 
 public enum BattleState { START, TURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
@@ -60,12 +61,20 @@ public class BattleSystem : MonoBehaviour
         }
         APbarre.fillAmount = (playerUnit.currrentAP - c.pA) / playerUnit.maxAP;
         playerUnit.currrentAP -= c.pA;
+
+        if (c.PlayerEffect == Card.EffectType.BuffAttack)
+        {
+            Buff(3);
+        }
+        else if (c.PlayerEffect == Card.EffectType.BuffDefence)
+        {
+            Block(playerUnit, 4);
+        }
+
         if (Array.IndexOf(enemyUnit.craint, c.name) > -1)
         {
             Damage(enemyUnit, c.PlayerDamage);
-            Heal(c.PlayerHeal);
-            Block(playerUnit,4);
-            Buff(3);
+            HealPlayer(c.PlayerHeal);
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
                 DoT(enemyUnit, playerUnit.dotdamage);
@@ -74,6 +83,7 @@ public class BattleSystem : MonoBehaviour
         else if (Array.IndexOf(enemyUnit.resiste, c.name) > -1)
         {
             Damage(playerUnit, c.EnemyDamage);
+            HealFoe(c.EnemyHeal);
             if (c.EnemyEffect == Card.EffectType.DOT)
             {
                 DoT(playerUnit, enemyUnit.dotdamage);
@@ -187,10 +197,16 @@ public class BattleSystem : MonoBehaviour
         u.defense = value;
     }
 
-    public void Heal(int value)
+    public void HealPlayer(int value)
     {
         playerUnit.currentHP = Mathf.Min(playerUnit.currentHP + value,playerUnit.maxHP);
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
+    }
+
+    public void HealFoe(int value)
+    {
+        enemyUnit.currentHP = Mathf.Min(enemyUnit.currentHP + value, enemyUnit.maxHP);
+        EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
     }
 
     public void Buff(int value)
