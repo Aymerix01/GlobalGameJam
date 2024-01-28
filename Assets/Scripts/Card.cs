@@ -61,6 +61,8 @@ public class Card : MonoBehaviour
     [TextArea]
     [SerializeField] private string fail;
 
+    [SerializeField] private AudioClip audioClip;
+
     
     // Start is called before the first frame update
     void Start()

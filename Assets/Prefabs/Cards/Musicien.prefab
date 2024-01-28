@@ -77,6 +77,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e71bb780d8f534499ef800d8c973182, type: 3}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
       value: 
       objectReference: {fileID: 21300000, guid: 7aeb0a0c77df8f4438d2edd7a906136c, type: 3}

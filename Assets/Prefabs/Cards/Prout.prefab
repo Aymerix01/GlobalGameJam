@@ -69,6 +69,10 @@ PrefabInstance:
       value: "Poison sur l\u2019ennemi"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dbabe240e729b64f8ebf497be93881d, type: 3}
+    - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
       value: 
       objectReference: {fileID: 21300000, guid: c7a0b2d3a45d6554683afac674c3e77b, type: 3}

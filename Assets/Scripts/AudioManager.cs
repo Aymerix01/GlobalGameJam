@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private List<AudioClip> musicList;
-    [SerializeField] private List<AudioClip> sfxList;
-    [Header("Voice Clips")]
-    [SerializeField] private List<AudioClip> bougClips;
-    [SerializeField] private List<AudioClip> dwarfClips;
-    [SerializeField] private List<AudioClip> clownClips;
-    [SerializeField] private List<AudioClip> kingClips;
-
+    public Dictionary<string, AudioClip[]> audioClips = new Dictionary<string, AudioClip[] >(40);
+    
+    public List<string> names;
+    public List<List<AudioClip>> clips;
     private AudioSource audioPlayer;
-
+    
     public void PlayClip(string listToCall, int i)
     {
-        audioPlayer = GetComponent<AudioSource>();
         
+        audioPlayer = GetComponent<AudioSource>();
+        /*
         if(listToCall == "Music")
         {
             audioPlayer.clip = musicList[i];
@@ -48,6 +45,6 @@ public class AudioManager : MonoBehaviour
             audioPlayer.clip = kingClips[i];
             audioPlayer.Play();
         }
-
+        */
     }
 }
