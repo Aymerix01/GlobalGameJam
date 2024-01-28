@@ -583,7 +583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1293946152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -645,7 +645,7 @@ Transform:
   m_GameObject: {fileID: 1293946151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.3, y: 3.4782455, z: 0}
+  m_LocalPosition: {x: 8.5, y: 2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -941,9 +941,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 1633936502}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: APbarre
       value: 
       objectReference: {fileID: 672118856}
+    - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
+      propertyPath: dotdamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6064431663556030960, guid: a09c801637680654098dcf0b7d1fa823, type: 3}
       propertyPath: HealthBarre
       value: 
@@ -1074,6 +1082,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 1293946152}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: audioClip
       value: 
