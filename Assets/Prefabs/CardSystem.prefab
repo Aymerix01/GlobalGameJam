@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 345054805976522342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.709999, y: -6.5, z: 0}
+  m_LocalPosition: {x: 11.85, y: -6.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -227,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 2994441264557102366}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.530001, y: -6.5, z: 0}
+  m_LocalPosition: {x: 8.09, y: -6.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 6104747704914164667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3500004, y: -6.5, z: 0}
+  m_LocalPosition: {x: 4.39, y: -6.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +448,7 @@ Transform:
   m_GameObject: {fileID: 8601480244858621590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.519999, y: -6.5, z: 0}
+  m_LocalPosition: {x: 15.579999, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -478,13 +478,13 @@ MonoBehaviour:
   - {fileID: 8090115419495531143, guid: 44e0be9dd228e2542bf9157e8d473d7c, type: 3}
   - {fileID: 9162906786759680621, guid: 0a44c1e642258ba48880303d08fb5d2c, type: 3}
   - {fileID: 5023596341562538648, guid: cd43a836b9a70f048b486cc4846e701a, type: 3}
-  - {fileID: 9162906786759680621, guid: 0a44c1e642258ba48880303d08fb5d2c, type: 3}
+  - {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
   CardPos:
   - {fileID: 4234607685683189437}
   - {fileID: 7123687398767879658}
   - {fileID: 265973243024677864}
   - {fileID: 1629093096531729258}
-  CardBack: {fileID: 2601155883487362980, guid: 5e882a1d3b403ec4e99cb4e0f964abb3, type: 3}
+  CardBack: {fileID: 4504095828806435641, guid: bacad05b1b44d6c4992878473e8ef4a3, type: 3}
 --- !u!1 &8684935470908231179
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_GameObject: {fileID: 8684935470908231179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.17, y: -6.5, z: 0}
+  m_LocalPosition: {x: 0.61, y: -6.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,12 +529,16 @@ PrefabInstance:
       value: Reroll_Sprites
       objectReference: {fileID: 0}
     - target: {fileID: 2156605545729926599, guid: 99ab850e83573f1458a328922fbea3dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156605545729926599, guid: 99ab850e83573f1458a328922fbea3dd, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2272819951572013855, guid: 99ab850e83573f1458a328922fbea3dd, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4929679619964957231, guid: 99ab850e83573f1458a328922fbea3dd, type: 3}
       propertyPath: m_LocalScale.x
