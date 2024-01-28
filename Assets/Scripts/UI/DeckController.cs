@@ -14,9 +14,11 @@ public class DeckController : MonoBehaviour
     private GameObject CardBackSpawned;
     private List<DragDrop> CardsInHand;
     private List<DragDrop> CardsInDeck;
+
+    private GameObject player;
     private void Awake()
     {
-
+        player = GameObject.Find("Player");
         CardsInHand = new List<DragDrop>();
         CardsInDeck = new List<DragDrop>();
         int i = 0;
@@ -74,19 +76,23 @@ public class DeckController : MonoBehaviour
 
     public void RerollAllCards()
     {
-        int i = 0;
-        CardsInHand.RemoveAll(x => !x);
-        if (CardsInHand.Count > 0)
+        if (1 <= player.GetComponent<PlayerUnit>().currrentAP)
         {
-            Debug.Log(CardsInHand.Count);
-            foreach (DragDrop card in CardsInHand.ToArray())
+            player.GetComponent<PlayerUnit>().currrentAP -= 1;
+            player.GetComponent<PlayerUnit>().UpdateAP();
+            int i = 0;
+            CardsInHand.RemoveAll(x => !x);
+            if (CardsInHand.Count > 0)
             {
-                if (i < 4)
+                foreach (DragDrop card in CardsInHand.ToArray())
                 {
-                    RerollOneCard(card, CardPos[i].transform.position);
-                }
-                i++;
+                    if (i < 4)
+                    {
+                        RerollOneCard(card, CardPos[i].transform.position);
+                    }
+                    i++;
 
+                }
             }
         }
     }

@@ -10,10 +10,12 @@ public class AudioManager : MonoBehaviour
     public List<List<AudioClip>> clips;
     private AudioSource audioPlayer;
     
-    public void PlayClip(string listToCall, int i)
+    public void PlayClip(AudioClip audioClip)
     {
         
         audioPlayer = GetComponent<AudioSource>();
+        audioPlayer.clip = audioClip;
+        audioPlayer.Play();
         /*
         if(listToCall == "Music")
         {

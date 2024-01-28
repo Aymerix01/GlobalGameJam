@@ -13,9 +13,9 @@ public class EnemyUnit : Unit
     [SerializeField] float probaatt;
     [SerializeField] float probadef;
     [SerializeField] float probaAeD;
-    [SerializeField] public int damage;
-    [SerializeField] public GameObject[] craint;
-    [SerializeField] public GameObject[] resiste;
+    [SerializeField] public float damage;
+    [SerializeField] public string[] craint;
+    [SerializeField] public string[] resiste;
 
     public void NextMove()
     {

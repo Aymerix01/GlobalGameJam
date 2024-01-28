@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] public int maxHP;
-    public int currentHP;
-    public int activedot;
-    public int defense;
-    public int atkbuff;
+    [SerializeField] public float maxHP;
+    public float currentHP;
+    public float activedot;
+    public float defense;
+    public float atkbuff;
 
     public void TakeDoT()
     {
         if (activedot > 0)
         {
-            this.currentHP -= activedot;
+            currentHP -= activedot;
             activedot--;
         }
     }

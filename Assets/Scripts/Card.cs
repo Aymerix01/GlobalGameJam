@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
 
     [Header("Battle Stats")]
     [Range(0,10)]
-    public int pA;
+    public float pA;
 
     enum CardType { Attack, Utility }
     [SerializeField] CardType type;
@@ -60,7 +60,7 @@ public class Card : MonoBehaviour
     [TextArea]
     [SerializeField] private string fail;
 
-    [SerializeField] private AudioClip audioClip;
+    public AudioClip audioClip;
 
     
     // Start is called before the first frame update

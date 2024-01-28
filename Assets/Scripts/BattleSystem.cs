@@ -4,10 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System;
 
 public enum BattleState { START, TURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
-{
+{  
     public BattleState state;
 
     [SerializeField] private GameObject playerInstance;
@@ -19,6 +21,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Image APbarre;
     [SerializeField] private Image HealthBarre;
     [SerializeField] private Image EnemyBarre;
+
+    [SerializeField] private GameObject WIN;
+    [SerializeField] private GameObject Lose;
+
+    [SerializeField] private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -39,19 +46,44 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.TURN;
     }
 
-    public IEnumerator Turn(Card c)
+    public void Turn(Card c)
     {
-        Debug.Log("Card played");
         playerUnit.TakeDoT();
         enemyUnit.TakeDoT();
-
+        if (c.audioClip != null)
+        {
+            audioManager.PlayClip(c.audioClip);
+        } 
+        else if (playerUnit.audioClip[c.name] != null)
+        {
+            audioManager.PlayClip(playerUnit.audioClip[c.name]);
+        }
         APbarre.fillAmount = (playerUnit.currrentAP - c.pA) / playerUnit.maxAP;
+        playerUnit.currrentAP -= c.pA;
+        if (Array.IndexOf(enemyUnit.craint, c.name) > -1)
+        {
+            Damage(enemyUnit, c.PlayerDamage);
+            Heal(c.PlayerHeal);
+            if (c.PlayerEffect == Card.EffectType.DOT)
+            {
+                DoT(enemyUnit, 4);
+            }
+        } 
+        else if (Array.IndexOf(enemyUnit.resiste, c.name) > -1)
+        {
+            Damage(playerUnit, c.EnemyDamage);
+            if (c.PlayerEffect == Card.EffectType.DOT)
+            {
+                DoT(playerUnit, 4);
+            }
+        }
+        else
+        {
+            Debug.Log("Nothing");
+        }
 
         //Effet de carte
-        Damage(enemyUnit, c.PlayerDamage);
-        Damage(playerUnit,c.EnemyDamage);
-        Heal(c.PlayerHeal);
-        switch (c.PlayerEffect)
+        /*switch (c.PlayerEffect)
         {
             case Card.EffectType.DOT:
                 DoT(enemyUnit, 4);
@@ -68,22 +100,24 @@ public class BattleSystem : MonoBehaviour
                 enemyUnit.attaque = EnemyUnit.nextMove.Stunned;
                 break;
 
-        }
+        }*/
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
 
-        yield return new WaitForSeconds(1);
-
-        if (state == BattleState.WON)
+        if (playerUnit.currentHP<=0)
         {
-            EndBattle();
+            Lose.SetActive(true);
+            Debug.Log("LOST");
         }
-        else
+        else if (enemyUnit.currentHP<=0)
         {
-            state = BattleState.TURN;
+            WIN.SetActive(true);
+            Debug.Log("WIN");
         }
+    }
 
-        //Action de l'ennemi
+    public void TourEnemy()
+    {
         switch (enemyUnit.attaque)
         {
             case EnemyUnit.nextMove.Attack:
@@ -92,7 +126,7 @@ public class BattleSystem : MonoBehaviour
                 Block(enemyUnit, 4); break;
             case EnemyUnit.nextMove.AetD:
                 Damage(playerUnit, enemyUnit.damage - 3);
-                Block(enemyUnit,2); break;
+                Block(enemyUnit, 2); break;
             case EnemyUnit.nextMove.Stunned:
                 break;
 
@@ -100,38 +134,25 @@ public class BattleSystem : MonoBehaviour
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         enemyUnit.NextMove();
 
-
-        yield return new WaitForSeconds(1);
-
-        if (state == BattleState.LOST)
+        if (playerUnit.currentHP <= 0)
         {
-            EndBattle();
+            Lose.SetActive(true);
+            Debug.Log("LOST");
         }
-        else
+        else if (enemyUnit.currentHP <= 0)
         {
-            state = BattleState.TURN;
+            WIN.SetActive(true);
+            Debug.Log("WIN");
         }
-
-        yield return new WaitForSeconds(1);
 
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
+
+        playerUnit.currrentAP = playerUnit.maxAP;
+        playerUnit.UpdateAP();
     }
 
-    void EndBattle()
-    {
-        if (state == BattleState.WON)
-        {
-            //Go to next fight
-        }
-        else if (state == BattleState.LOST)
-        {
-            //Go to Game Over
-        }
-    }
-
-
-    public void Damage(Unit u,int damage)
+    public void Damage(Unit u,float damage)
     {
         u.currentHP = Mathf.Max( u.currentHP- damage + u.defense + u.atkbuff,0);
         u.defense = 0;
