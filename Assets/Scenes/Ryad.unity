@@ -158,6 +158,9 @@ MonoBehaviour:
   APbarre: {fileID: 1972703512}
   HealthBarre: {fileID: 1383423574}
   EnemyBarre: {fileID: 768085444}
+  WIN: {fileID: 0}
+  Lose: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!4 &208278513
 Transform:
   m_ObjectHideFlags: 0
@@ -262,12 +265,12 @@ MonoBehaviour:
   probaAeD: 0
   damage: 0
   craint:
-  - {fileID: 5874005289970604019, guid: 20dbdbd378bda8541b2407ed29f52a4c, type: 3}
-  - {fileID: 8947963802525474649, guid: d8d6825771fffae4d8ab0ba53bca6729, type: 3}
-  - {fileID: 7054309020423980512, guid: 664627101d0928f4f90f054e0d754a72, type: 3}
-  - {fileID: 5996385114674054653, guid: 25e17c3f6ebb8a246acd907a9da40943, type: 3}
+  - 
+  - 
+  - 
+  - 
   resiste:
-  - {fileID: 4778156989182049981, guid: 0bf9422834210fd42806531d8276864d, type: 3}
+  - 
 --- !u!212 &517263438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -383,6 +386,8 @@ MonoBehaviour:
   atkbuff: 0
   maxAP: 6
   currrentAP: 6
+  APbarre: {fileID: 1972703512}
+  HealthBarre: {fileID: 1383423574}
 --- !u!212 &1024573369
 SpriteRenderer:
   m_ObjectHideFlags: 0
