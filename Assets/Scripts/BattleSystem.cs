@@ -49,8 +49,6 @@ public class BattleSystem : MonoBehaviour
 
     public void Turn(Card c)
     {
-        playerUnit.TakeDoT();
-        enemyUnit.TakeDoT();
         if (c.audioClip != null)
         {
             audioManager.PlayClip(c.audioClip);
@@ -116,6 +114,7 @@ public class BattleSystem : MonoBehaviour
                 break;
 
         }*/
+        playerUnit.TakeDoT();
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
 
@@ -150,6 +149,7 @@ public class BattleSystem : MonoBehaviour
                 break;
 
         }
+        enemyUnit.TakeDoT();
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
         enemyUnit.NextMove();
 

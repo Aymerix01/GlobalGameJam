@@ -1664,7 +1664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.data[0]
-      value: Fromage(Clone)
+      value: Musicien(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.data[1]
