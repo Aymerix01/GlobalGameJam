@@ -66,7 +66,7 @@ public class BattleSystem : MonoBehaviour
             Heal(c.PlayerHeal);
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
-                DoT(enemyUnit, 4);
+                DoT(enemyUnit, playerUnit.dotdamage);
             }
         } 
         else if (Array.IndexOf(enemyUnit.resiste, c.name) > -1)
@@ -74,7 +74,7 @@ public class BattleSystem : MonoBehaviour
             Damage(playerUnit, c.EnemyDamage);
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
-                DoT(playerUnit, 4);
+                DoT(playerUnit, enemyUnit.dotdamage);
             }
         }
         else
@@ -160,7 +160,6 @@ public class BattleSystem : MonoBehaviour
     {
         u.currentHP = Mathf.Max( u.currentHP- damage + u.defense + u.atkbuff,0);
         u.defense = 0;
-        u.atkbuff = 0;
         if (u.currentHP<=0 )
         {
             Destroy(u);
@@ -176,12 +175,12 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void DoT(Unit u,int value)
+    public void DoT(Unit u,float value)
     {
         u.activedot = value;
     }
 
-    public void Block(Unit u, int value)
+    public void Block(Unit u, float value)
     {
         u.defense = value;
     }
