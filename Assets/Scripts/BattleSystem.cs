@@ -68,7 +68,7 @@ public class BattleSystem : MonoBehaviour
         if (Array.IndexOf(enemyUnit.craint, c.name) > -1)
         {
 
-            Damage(enemyUnit, c.PlayerDamage + playerUnit.atkbuff);
+            Damage(enemyUnit, c.PlayerDamage + playerUnit.atkbuff*f(c.PlayerDamage));
             HealPlayer(c.PlayerHeal);
             Block(playerUnit,4);
             Buff(3);
@@ -213,5 +213,17 @@ public class BattleSystem : MonoBehaviour
     public void Buff(float value)
     {
         playerUnit.atkbuff = value;
+    }
+
+    float f(float value)
+    {
+        if(value == 0)
+        {
+            return 0f;
+        }
+        else
+        {
+            return 1f;
+        }
     }
 }

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Aymeric.unity
     guid: d9afbd4cb5e1e83468878809d88f6b84
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TestLeBoug.unity
     guid: 199bf2621ad027f43ba620a7b96596b7
   - enabled: 1
