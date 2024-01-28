@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: "1 d\xE9g\xE2t sur joueur."
+      value: "3 d\xE9g\xE2ts sur joueur."
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: joke
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: Poison sur ennemi.
+      value: 3 points de Sourire sur ennemi.
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0aa5636496c0ad74095c6be53a10a8b3, type: 3}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: EnemyDamage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerEffect

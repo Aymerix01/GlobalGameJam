@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: pA
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: 'Poison sur le joueur
+      value: '3 Tristesse sur le joueur
 
 '
       objectReference: {fileID: 0}
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: "2 d\xE9g\xE2ts sur l\u2019ennemi\n\t2 soins sur le  joueur\r\n"
+      value: "10 d\xE9g\xE2ts sur l\u2019ennemi\n4 soins sur le  joueur\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 16e8b09ce52adea4eba34fa9c0666637, type: 3}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerHeal
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: EnemyEffect
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerDamage
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

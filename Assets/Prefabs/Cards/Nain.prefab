@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: "1 d\xE9gat sur le joueur"
+      value: "3 d\xE9gats sur le joueur"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: joke
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: "1 d\xE9g\xE2t sur l'ennemi"
+      value: "8 d\xE9g\xE2ts sur l'ennemi"
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: cardImage
@@ -74,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5e73b77e701e74945a6b8505417469fa, type: 3}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: EnemyDamage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerDamage
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

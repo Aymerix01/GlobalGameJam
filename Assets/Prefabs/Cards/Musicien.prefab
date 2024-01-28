@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: fail
-      value: 2 soins sur ennemi.
+      value: 4 soins sur ennemi.
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: joke
@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: sucess
-      value: "5 d\xE9g\xE2ts sur ennemi."
+      value: "8 d\xE9g\xE2ts sur ennemi."
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: EnemyHeal
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: audioClip
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7aeb0a0c77df8f4438d2edd7a906136c, type: 3}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerDamage
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8306707196882645105, guid: da75d0810f4604f42adbda125f3e620a, type: 3}
       propertyPath: PlayerEffect
