@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Roi.unity
     guid: 094238ef498bfed45a240961c0abe255
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 57390c144bf366548af2592186812cdb
   m_configObjects: {}
