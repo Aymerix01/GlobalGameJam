@@ -75,9 +75,7 @@ public class BattleSystem : MonoBehaviour
         {
 
             Damage(enemyUnit, c.PlayerDamage + playerUnit.atkbuff);
-            Heal(c.PlayerHeal);
-            Block(playerUnit,4);
-            Buff(3);
+            HealPlayer(c.PlayerHeal);
 
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
@@ -96,6 +94,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             Debug.Log("Nothing");
+
         }
 
         //Effet de carte
@@ -202,19 +201,19 @@ public class BattleSystem : MonoBehaviour
         u.defense = value;
     }
 
-    public void HealPlayer(int value)
+    public void HealPlayer(float value)
     {
         playerUnit.currentHP = Mathf.Min(playerUnit.currentHP + value,playerUnit.maxHP);
         HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
     }
 
-    public void HealFoe(int value)
+    public void HealFoe(float value)
     {
         enemyUnit.currentHP = Mathf.Min(enemyUnit.currentHP + value, enemyUnit.maxHP);
         EnemyBarre.fillAmount = enemyUnit.currentHP / enemyUnit.maxHP;
     }
 
-    public void Buff(int value)
+    public void Buff(float value)
     {
         playerUnit.atkbuff = value;
     }

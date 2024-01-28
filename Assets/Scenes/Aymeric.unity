@@ -1438,6 +1438,10 @@ PrefabInstance:
       propertyPath: effect
       value: 
       objectReference: {fileID: 1104083131}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: dotdamage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
