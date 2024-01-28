@@ -118,7 +118,7 @@ public class BattleSystem : MonoBehaviour
 
     public void TourEnemy()
     {
-        if (enemyUnit.tag == "Nain")
+        if (enemyUnit.audioClip != null)
         {
             audioManager.PlayClip(enemyUnit.audioClip);
         }
