@@ -17,6 +17,8 @@ public class EnemyUnit : Unit
     [SerializeField] public string[] craint;
     [SerializeField] public string[] resiste;
 
+    [SerializeField] public AudioClip audioClip;
+
     public void NextMove()
     {
         int roll = new System.Random().Next(100);

@@ -118,6 +118,10 @@ public class BattleSystem : MonoBehaviour
 
     public void TourEnemy()
     {
+        if (enemyUnit.tag == "Nain")
+        {
+            audioManager.PlayClip(enemyUnit.audioClip);
+        }
         switch (enemyUnit.attaque)
         {
             case EnemyUnit.nextMove.Attack:
@@ -185,6 +189,7 @@ public class BattleSystem : MonoBehaviour
     public void Heal(int value)
     {
         playerUnit.currentHP = Mathf.Min(playerUnit.currentHP + value,playerUnit.maxHP);
+        HealthBarre.fillAmount = playerUnit.currentHP / playerUnit.maxHP;
     }
 
     public void Buff(int value)
