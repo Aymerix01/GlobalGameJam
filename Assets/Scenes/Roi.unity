@@ -1465,6 +1465,10 @@ PrefabInstance:
       propertyPath: CardBack
       value: 
       objectReference: {fileID: 4504095828806435641, guid: bacad05b1b44d6c4992878473e8ef4a3, type: 3}
+    - target: {fileID: 4157121419155473529, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
+      propertyPath: Cards.Array.data[11]
+      value: 
+      objectReference: {fileID: 735131232434555185, guid: 5a2c64bba75dba34498174aba25ee6ad, type: 3}
     - target: {fileID: 4234607685683189437, guid: eb530bfc823e63f4590eed1b36cd7a8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.61
@@ -1564,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: craint.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.size
@@ -1577,6 +1581,18 @@ PrefabInstance:
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: craint.Array.data[1]
       value: Prout(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[2]
+      value: BZ(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[3]
+      value: R(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
+      propertyPath: craint.Array.data[4]
+      value: Tarte(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 4872265893085706796, guid: 8324db21702246644a533a976b024154, type: 3}
       propertyPath: resiste.Array.data[0]
