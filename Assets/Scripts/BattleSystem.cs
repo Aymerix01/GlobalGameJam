@@ -73,8 +73,12 @@ public class BattleSystem : MonoBehaviour
 
         if (Array.IndexOf(enemyUnit.craint, c.name) > -1)
         {
-            Damage(enemyUnit, c.PlayerDamage);
-            HealPlayer(c.PlayerHeal);
+
+            Damage(enemyUnit, c.PlayerDamage + playerUnit.atkbuff);
+            Heal(c.PlayerHeal);
+            Block(playerUnit,4);
+            Buff(3);
+
             if (c.PlayerEffect == Card.EffectType.DOT)
             {
                 DoT(enemyUnit, playerUnit.dotdamage);
@@ -170,7 +174,8 @@ public class BattleSystem : MonoBehaviour
 
     public void Damage(Unit u,float damage)
     {
-        u.currentHP = Mathf.Max( u.currentHP- damage + u.defense + u.atkbuff,0);
+        float mitigateddamage = Mathf.Max(damage - u.defense, 0);
+        u.currentHP = Mathf.Max( u.currentHP - mitigateddamage,0);
         u.defense = 0;
         if (u.currentHP<=0 )
         {
