@@ -732,15 +732,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Commandes
+  m_text: 'Commandes :
 
-    Drag & Drop sur le terrain pour jouer une carte
+    Drag & Drop sur le terrain pour jouer une carte.
 
     Drag
-    & Drop sur le schuffle pour reroll une carte
+    & Drop sur le schuffle pour reroll une carte.
 
     Clique sur schuffle pour reroll
-    toutes les cartes
+    toutes les cartes.
 
 '
   m_isRightToLeft: 0
